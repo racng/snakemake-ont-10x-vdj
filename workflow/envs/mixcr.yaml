@@ -1,0 +1,7 @@
+name: mixcr
+channels:
+  - conda-forge
+  - bioconda
+  - milaboratories
+dependencies:
+  - milaboratories::mixcr==4.7.0

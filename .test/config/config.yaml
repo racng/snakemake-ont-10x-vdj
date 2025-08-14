@@ -1,8 +1,21 @@
-samplesheet: "config/samples.tsv"
+samplesheet: ".test/config/samples.tsv"
 
-get_genome:
-  ncbi_ftp: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz
+conda:
+  cutadapt: "../envs/cutadapt.yaml"
+  mixcr: "../envs/mixcr.yaml"
 
-simulate_reads:
-  read_length: 100
-  read_number: 10000
+threads:
+  cutadapt: 16
+  align: 16
+  extend: 16
+  assemble_contigs: 16
+
+mem_gb:
+  align: 32
+  refine: 16
+  assemble: 32
+  export_clones: 16
+  extend: 16
+
+cutadapt:
+  error_rate: 0.1
