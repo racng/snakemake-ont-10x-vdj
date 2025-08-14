@@ -1,3 +1,5 @@
-sample	condition	replicate	read1	read2
-sample1	wild_type	1	sample1.bwa.read1.fastq.gz	sample1.bwa.read2.fastq.gz
-sample2	wild_type	2	sample2.bwa.read1.fastq.gz	sample2.bwa.read2.fastq.gz
+sample_id	10x_chemistry	library_type	preset	read1
+20250425_1_t	5p_v2	cdna	10x-ont-cdna	/users/rng/proj/tlc/data/nanopore/2025-07-25_gd_tcr/raw/24h/2e1351b1-c0b3-4652-967e-6e551ae23970_SQK-NBD114-24_barcode18.fastq.gz
+20250429_1_t	5p_v2	cdna	10x-ont-cdna	/users/rng/proj/tlc/data/nanopore/2025-07-25_gd_tcr/raw/24h/2e1351b1-c0b3-4652-967e-6e551ae23970_SQK-NBD114-24_barcode19.fastq.gz
+20250327_1_gdt	5p_v2	cdna	10x-ont-cdna	/users/rng/proj/tlc/data/nanopore/2025-07-25_gd_tcr/raw/24h/2e1351b1-c0b3-4652-967e-6e551ae23970_SQK-NBD114-24_barcode20.fastq.gz
+20250425_1_gdt	5p_v2	cdna	10x-ont-cdna	/users/rng/proj/tlc/data/nanopore/2025-07-25_gd_tcr/raw/24h/2e1351b1-c0b3-4652-967e-6e551ae23970_SQK-NBD114-24_barcode21.fastq.gz

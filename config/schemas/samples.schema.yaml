@@ -1,25 +1,26 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
 description: entries for the sample sheet
 properties:
-  sample:
+  sample_id:
     type: string
     description: sample name/identifier
-  condition:
+  10x_chemistry:
     type: string
-    description: sample condition that will be compared during differential analysis
-  replicate:
-    type: integer
-    default: 1
-    description: consecutive numbers representing multiple replicates of one condition
+    default: 5p_v2
+    description: 10x chemisry (eg. 5p_v2)
+  library_type:
+    type: string
+    default: cdna
+    description: type of library sequenced (eg. cdna, illumina)
+  preset:
+    type: string
+    decription: mixcr preset to use
   read1:
     type: string
-    description: names of fastq.gz files, read 1
-  read2:
-    type: string
-    description: names of fastq.gz files, read 2 (optional)
+    description: path to FASTQ file (read1)
 
 required:
-  - sample
-  - condition
-  - replicate
+  - sample_id
+  - 10x_chemistry
+  - library_type
   - read1

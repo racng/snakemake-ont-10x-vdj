@@ -12,7 +12,8 @@ configfile: "config/config.yaml"
 # load rules
 # -----------------------------------------------------
 include: "rules/common.smk"
-include: "rules/process_reads.smk"
+include: "rules/cutadapt.smk"
+include: "rules/mixcr.smk"
 
 
 # optional messages, log and error handling
@@ -33,5 +34,13 @@ onerror:
 # -----------------------------------------------------
 rule all:
     input:
-        "results/multiqc/multiqc_report.html",
+        expand("results/{preset}/{sample}/airr.tsv", zip,
+            preset=samples['preset'], 
+            sample=samples['sample_id']),
+        expand("results/{preset}/{sample}/airr_extended.tsv", zip,
+            preset=samples['preset'], 
+            sample=samples['sample_id']),
+        expand("results/{preset}/{sample}/clones.tsv", zip,
+            preset=samples['preset'], 
+            sample=samples['sample_id']),
     default_target: True

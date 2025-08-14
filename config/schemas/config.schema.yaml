@@ -5,25 +5,59 @@ properties:
     type: string
     description: path to sample-sheet TSV file
 
-  get_genome:
+  conda:
     type: object
     properties:
-      ncbi_ftp:
+      cutadapt:
         type: string
-        description: URL for genome retrieval
-    required: ["ncbi_ftp"]
-
-  simulate_reads:
+        description: path to cutadapt conda env or yaml specification file
+      mixcr:
+        type: string
+        description: path to mixcr conda env or yaml specification file
+  
+  threads:
     type: object
     properties:
-      read_length:
+      cutadapt:
         type: number
-        description: length of target reads in bp
-      read_number:
+        description: number of threads to use for cutadapt
+      align:
         type: number
-        description: number of total reads to be simulated
+        description: number of threads to use for mixcr align
+      extend:
+        type: number
+        description: number of threads to use for mixcr extend
+      assemble_contigs:
+        type: number
+        description: number of threads to use for mixcr assembleContigs
+
+  mem_gb:
+    type: object
+    properties:
+      align:
+        type: number
+        description: memory (gb) to supply for mixcr align
+      refine:
+        type: number
+        description: memory (gb) to supply for mixcr refineTagsAndSort
+      assemble:
+        type: number
+        description: memory (gb) to supply for mixcr assemble
+      export_clones:
+        type: number
+        description: memory (gb) to supply for mixcr exportClnes
+      extend:
+        type: number
+        description: memory (gb) to supply for mixcr extend
+
+  cutadapt:
+    type: object
+    properties:
+      error_rate:
+        type: number
+        description: error tolerance used when searching for adapters
+
 
 required:
   - samplesheet
-  - get_genome
-  - simulate_reads
+
