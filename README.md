@@ -36,23 +36,16 @@ Before running the complete workflow, you can perform a dry run using:
 ```bash
 snakemake --dry-run
 ```
-
+Specify the number of cores and memory (GB) available.
 To run the workflow with test files using **conda**:
 
 ```bash
-snakemake --cores 2 --sdm conda --directory .test
-```
-
-To run the workflow with **apptainer** / **singularity**, add a link to a container registry in the `Snakefile`, for example `container: "oras://ghcr.io/<user>/<repository>:<version>"` for Github's container registry.
-Run the workflow with:
-
-```bash
-snakemake --cores 2 --sdm conda apptainer --directory .test
+snakemake --cores 16 --resources mem_gb=64 --sdm conda --directory .test
 ```
 
 ## Authors
 
-- Rachel Ngs
+- Rachel Ng
   - Affiliations: Univsersity of Washington; Institute for Systems Biology
   - [ORCID profile](https://orcid.org/0000-0003-3692-8524)
   - home page
