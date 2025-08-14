@@ -24,7 +24,7 @@ rule cutadapt:
     output:
         fastq="results/cutadapt/{sample}.fastq.gz"
     log:
-        "log/cutadapt.{sample}.log"
+        "logs/cutadapt.{sample}.log"
     params:
         adapter=get_adapter_str,
         error_rate=config['cutadapt']['error_rate'],

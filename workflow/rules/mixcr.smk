@@ -29,7 +29,7 @@ rule align_ont:
     resources:
         mem_gb=config["mem_gb"]["align"]
     log:
-        "log/{preset}.{sample}.align.log"
+        "logs/{preset}.{sample}.align.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -55,7 +55,7 @@ rule refine:
     resources:
         mem_gb=config["mem_gb"]["refine"]
     log:
-        "log/{preset}.{sample}.refine.log"
+        "logs/{preset}.{sample}.refine.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -85,7 +85,7 @@ rule assemble_refined:
     resources:
         mem_gb=config["mem_gb"]["assemble"]
     log:
-        "log/{preset}.{sample}.assemble.log"
+        "logs/{preset}.{sample}.assemble.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -116,7 +116,7 @@ rule assemble_partial:
     resources:
         mem_gb=config["mem_gb"]["assemble"]
     log:
-        "log/{preset}.{sample}.assemble_partial.log"
+        "logs/{preset}.{sample}.assemble_partial.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -142,7 +142,7 @@ rule extend_recovered:
     resources:
         mem_gb=config["mem_gb"]["extend"]
     log:
-        "log/{preset}.{sample}.extend_recovered.log"
+        "logs/{preset}.{sample}.extend_recovered.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -168,7 +168,7 @@ rule assemble_extended:
     resources:
         mem_gb=config["mem_gb"]["assemble"]
     log:
-        "log/{preset}.{sample}.assemble.log"
+        "logs/{preset}.{sample}.assemble.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -196,7 +196,7 @@ rule assemble_contigs:
     resources:
         mem_gb=config["mem_gb"]["assemble"]
     log:
-        "log/{preset}.{sample}.assemble.log"
+        "logs/{preset}.{sample}.assemble.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -222,7 +222,7 @@ rule export_clones:
     resources:
         mem_gb=config["mem_gb"]["export_clones"]
     log:
-        "log/{preset}.{sample}.export_clones.log"
+        "logs/{preset}.{sample}.export_clones.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -240,7 +240,7 @@ rule export_airr:
     output:
         "results/{preset}/{sample}/airr.tsv"
     log:
-        "log/{preset}.{sample}.export_airr.log"
+        "logs/{preset}.{sample}.export_airr.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -263,7 +263,7 @@ rule extend_assembled:
     resources:
         mem_gb=config["mem_gb"]["extend"]
     log:
-        "log/{preset}.{sample}.extend.log"
+        "logs/{preset}.{sample}.extend.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -284,7 +284,7 @@ rule export_airr_extended:
     output:
         "results/{preset}/{sample}/airr_extended.tsv"
     log:
-        "log/{preset}.{sample}.export_airr.log"
+        "logs/{preset}.{sample}.export_airr.log"
     conda:
         config['conda']['mixcr']
     shell:
