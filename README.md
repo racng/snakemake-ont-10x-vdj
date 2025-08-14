@@ -1,9 +1,9 @@
 # Snakemake workflow: snakemake-ont-10x-vdj
 
 [![Snakemake](https://img.shields.io/badge/snakemake-≥8.0.0-brightgreen.svg)](https://snakemake.github.io)
-[![GitHub actions status](https://github.com/<owner>/<repo>/workflows/Tests/badge.svg?branch=main)](https://github.com/<owner>/<repo>/actions?query=branch%3Amain+workflow%3ATests)
+[![GitHub actions status](https://github.com/racng/snakemake-ont-10x-vdj/workflows/Tests/badge.svg?branch=main)](https://github.com/racng/snakemake-ont-10x-vdj/actions?query=branch%3Amain+workflow%3ATests)
 [![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/en/latest/)
-[![workflow catalog](https://img.shields.io/badge/Snakemake%20workflow%20catalog-darkgreen)](https://snakemake.github.io/snakemake-workflow-catalog/docs/workflows/<owner>/<repo>)
+[![workflow catalog](https://img.shields.io/badge/Snakemake%20workflow%20catalog-darkgreen)](https://snakemake.github.io/snakemake-workflow-catalog/docs/workflows/racng/snakemake-ont-10x-vdj)
 
 A Snakemake workflow for analysis of 10x Genomics single cell V(D)J libraries using nanopore long-read sequencing.
 
@@ -16,7 +16,7 @@ A Snakemake workflow for analysis of 10x Genomics single cell V(D)J libraries us
 
 ## Usage
 
-The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/docs/workflows/<owner>/<repo>).
+The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/docs/workflows/racng/snakemake-ont-10x-vdj).
 
 Detailed information about input data and workflow configuration can also be found in the [`config/README.md`](config/README.md).
 
