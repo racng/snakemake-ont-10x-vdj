@@ -3,6 +3,7 @@ samplesheet: ".test/config/samples.tsv"
 conda:
   cutadapt: "/users/rng/mambaforge/envs/cutadapt"
   mixcr: "/users/rng/mambaforge/envs/mixcr-4.7.0"
+  plot: "/users/rng/mambaforge/envs/compbio"
 
 threads:
   cutadapt: 16

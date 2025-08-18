@@ -43,4 +43,7 @@ rule all:
         expand("results/{preset}/{sample}/clones.tsv", zip,
             preset=samples['preset'], 
             sample=samples['sample_id']),
+        expand("results/{preset}/{sample}/saturation.png", zip,
+            preset=samples['preset'], 
+            sample=samples['sample_id']),
     default_target: True

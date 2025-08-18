@@ -14,6 +14,9 @@ properties:
       mixcr:
         type: string
         description: path to mixcr conda env or yaml specification file
+      plot:
+        type: string
+        description: path to plot conda env or yaml specification file
   
   threads:
     type: object

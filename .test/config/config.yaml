@@ -3,7 +3,8 @@ samplesheet: ".test/config/samples.tsv"
 conda:
   cutadapt: "../envs/cutadapt.yaml"
   mixcr: "../envs/mixcr.yaml"
-
+  plot: "../envs/plot.yaml"
+  
 threads:
   cutadapt: 16
   align: 16

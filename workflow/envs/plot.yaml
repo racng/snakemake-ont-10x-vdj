@@ -1,0 +1,7 @@
+name: plot
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - matplotlib
