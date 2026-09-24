@@ -284,7 +284,7 @@ rule export_airr_extended:
     output:
         "results/{preset}/{sample}/airr_extended.tsv"
     log:
-        "logs/{preset}.{sample}.export_airr.log"
+        "logs/{preset}.{sample}.export_airr_extended.log"
     conda:
         config['conda']['mixcr']
     shell:
@@ -293,3 +293,14 @@ rule export_airr_extended:
         "{input} {output} "
         "&> {log}"
 
+rule plot_saturation:
+    input:
+        "results/{preset}/{sample}/airr.tsv"
+    output:
+        "results/{preset}/{sample}/saturation.png"
+    conda:
+        config['conda']['plot']
+    params:
+        colname="consensus_count"
+    script:
+        "../scripts/saturation.py"
